@@ -1,7 +1,7 @@
 import { swap } from "../utils/swap";
-import { BaseSort } from "./BaseSort";
+import { Sort } from "./BaseSort";
 
-export class BubbleSort extends BaseSort {
+export class BubbleSort extends Sort {
   constructor() {
     super("Bubble Sort");
   }
