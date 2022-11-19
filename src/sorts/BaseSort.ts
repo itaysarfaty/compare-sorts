@@ -1,10 +1,10 @@
 import { IResult } from "../interfaces/IResult";
 
-export abstract class BaseSort {
+export abstract class Sort {
   constructor(protected readonly name: string) {}
 
-  // return sorted array
-  abstract sort(array: number[]): number[];
+  // Sort array in place
+  abstract sort(array: number[]): void;
 
   public getResult(array: number[]): IResult {
     const copyArr = [...array];
