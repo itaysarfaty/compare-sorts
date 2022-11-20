@@ -1,31 +1,41 @@
-import { Collection } from "./Collection";
 import { compareResult, IResult } from "../interfaces/IResult";
-import { Sort } from "../sorts/BaseSort";
+import { Sort } from "./sorts/BaseSort";
+import { Collection } from "./collections/BaseCollection";
 
-export class Driver {
+export class Driver<T> {
   constructor(
-    private sortingAlgs: Sort[],
-    private collection: Collection = new Collection()
+    private sortingAlgs: Sort<T>[],
+    private collection: Collection<T>
   ) {
     this.sortingAlgs = sortingAlgs;
     this.collection = collection;
   }
 
-  public getResults() {
+  public getResults(size: number, trials: number) {
+    // Generate new collection
+    this.generateCollection(size);
+
+    // Empty array
     const results: IResult[] = [];
 
-    // Get result for each sorting alg
+    // Add result from each sort to array
     this.sortingAlgs.forEach((alg) => {
-      const result = alg.getResult(this.collection.numbers);
+      const result = alg.getResult(
+        this.collection.array,
+        this.collection.compare,
+        trials
+      );
       results.push(result);
     });
 
     // Sort: fastest -> slowest
     results.sort(compareResult);
-    return { size: this.collection.size, results };
+    return { size: this.collection.size, trials, results };
   }
 
-  public reset(size: number = this.collection.size) {
+  // Create new list
+  // Optional size -> Default: collection size
+  private generateCollection(size: number = this.collection.size) {
     this.collection.new(size);
   }
 }
