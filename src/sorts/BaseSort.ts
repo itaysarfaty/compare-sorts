@@ -17,6 +17,6 @@ export abstract class Sort {
 
     //Round up to 5 decimal places
     const time = parseFloat(rawTime.toFixed(5));
-    return { name: this.name, time };
+    return { name: this.name, msec: time };
   }
 }
