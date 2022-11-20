@@ -29,10 +29,10 @@ export const parseQuery: RequestHandler = (req, res, next) => {
 };
 
 const validateQuery = (query: Partial<IQuery>) => {
-  if (query.size) throwNaN(query.size, "Size");
-  if (query.trials) throwNaN(query.trials, "Trials");
+  if (query.size) throwIfNaN(query.size, "Size");
+  if (query.trials) throwIfNaN(query.trials, "Trials");
 };
 
-const throwNaN = (test: number, name: string) => {
+const throwIfNaN = (test: number, name: string) => {
   if (isNaN(test)) throw new Error(name + " must be a number!");
 };
