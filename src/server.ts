@@ -1,4 +1,4 @@
-import { parseQuery } from "./parseQuery";
+import { parseQuery } from "./middleware/parseQuery";
 import express from "express";
 import routes from "./routes";
 

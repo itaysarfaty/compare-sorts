@@ -1,4 +1,4 @@
-import { compareResult, IResult } from "../interfaces/IResult";
+import { compareResult } from "../utils/compareResult";
 import { Sort } from "./sorts/BaseSort";
 import { Collection } from "./collections/BaseCollection";
 

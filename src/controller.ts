@@ -2,7 +2,7 @@ import { RequestHandler } from "express";
 import { Numbers } from "./classes/collections/Numbers";
 import { Driver } from "./classes/Driver";
 import { SortNumbers as Sort } from "./classes/sorts/collections";
-import { IQuery } from "./parseQuery";
+import { IQuery } from "./middleware/parseQuery";
 
 const driver = new Driver(Sort, new Numbers(1000, 100_000));
 

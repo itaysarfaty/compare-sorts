@@ -1,6 +1,3 @@
-import { CompareFn } from "../../interfaces/CompareFn";
-import { IResult } from "../../interfaces/IResult";
-
 export abstract class Sort<T> {
   constructor(protected readonly name: string) {}
 
