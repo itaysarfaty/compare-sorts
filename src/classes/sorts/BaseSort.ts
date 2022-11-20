@@ -1,20 +1,24 @@
 export abstract class Sort<T> {
-  constructor(protected readonly name: string) {}
+  get name() {
+    return this._name;
+  }
+  constructor(protected readonly _name: string) {}
 
   // Sort array in place
-  abstract sort(array: T[], compare: CompareFn<T>): void;
+  abstract sort(array: T[], compare: ICompareFn<T>): void;
 
-  public getResult(array: T[], compare: CompareFn<T>, trials: number): IResult {
+  public getResult(
+    array: T[],
+    compare: ICompareFn<T>,
+    trials: number
+  ): IResult {
     this.checkTrialSize(trials);
     let averageExecutionTime = 0;
 
     for (let i = 1; i <= trials; i++) {
-      // New copy of array
-      const copiedArr = [...array];
-
       // Calculate execution time
       const start = performance.now();
-      this.sort(copiedArr, compare);
+      this.sort(array, compare);
       const end = performance.now();
 
       // Aggregate total milliseconds
@@ -27,7 +31,7 @@ export abstract class Sort<T> {
     //Round up to 5 decimal places
     const time = parseFloat(averageExecutionTime.toFixed(5));
 
-    return { name: this.name, msec: time };
+    return { name: this._name, msec: time };
   }
 
   private checkTrialSize(size: number) {

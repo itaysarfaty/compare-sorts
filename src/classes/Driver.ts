@@ -1,6 +1,7 @@
 import { compareResult } from "../utils/compareResult";
 import { Sort } from "./sorts/BaseSort";
 import { Collection } from "./collections/BaseCollection";
+import _ from "lodash";
 
 export class Driver<T> {
   constructor(
@@ -37,5 +38,18 @@ export class Driver<T> {
   // Optional size -> Default: collection size
   private generateCollection(size: number = this.collection.size) {
     this.collection.new(size);
+  }
+
+  public test() {
+    this.generateCollection(5);
+    const results: { name: string; passed: boolean }[] = [];
+    const trueSort = [...this.collection.array].sort();
+
+    this.sortingAlgs.forEach((alg) => {
+      const unsorted = [...this.collection.array];
+      const sorted = alg.sort(unsorted, this.collection.compare);
+      results.push({ name: alg.name, passed: _.isEqual(trueSort, sorted) });
+    });
+    return results;
   }
 }

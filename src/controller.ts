@@ -1,10 +1,10 @@
 import { RequestHandler } from "express";
+
 import { Numbers } from "./classes/collections/Numbers";
 import { Driver } from "./classes/Driver";
 import { SortNumbers as Sort } from "./classes/sorts/export";
-import { IQuery } from "./middleware/parseQuery";
 
-const driver = new Driver(Sort, new Numbers(1000, 100_000));
+const driver = new Driver(Sort, new Numbers(5, 100_000));
 
 const compare: RequestHandler = (req, res, next) => {
   try {
@@ -18,6 +18,18 @@ const compare: RequestHandler = (req, res, next) => {
   }
 };
 
+const test: RequestHandler = (req, res, next) => {
+  try {
+    const results = driver.test();
+    res.json(results);
+  } catch (err) {
+    if (err instanceof Error) {
+      res.json(err.message);
+    }
+  }
+};
+
 export default {
   compare,
+  test,
 };
