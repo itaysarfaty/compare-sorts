@@ -1,11 +1,5 @@
 import { RequestHandler } from "express";
 
-// Interface for query
-export interface IQuery {
-  size: number;
-  trials: number;
-}
-
 // Pass a validated query into res.locales.query
 export const parseQuery: RequestHandler = (req, res, next) => {
   const query: Partial<IQuery> = req.query;
