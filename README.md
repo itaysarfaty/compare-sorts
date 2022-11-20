@@ -1,3 +1,5 @@
+<pre>Projects in progress...</pre>
+
 ## Supported algorithms
 
 - Bubble Sort
