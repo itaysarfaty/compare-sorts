@@ -11,8 +11,7 @@
 4. Define a `generate` method that accepts a size
 
 ## Adding a new algorithm
-> Must NOT sort in place :warning:
-
+:warning: - Must not modify existing array </pre> 
 
 1. Create a class that `extends Sort<T>`
 2. Pass sort name to super in constructor
