@@ -1,4 +1,4 @@
 import { Sort } from "./BaseSort";
 import { BubbleSort } from "./Bubble";
-
-export const SortNumbers: Sort<number>[] = [new BubbleSort()];
+import { MergeSort } from "./Merge";
+export const SortNumbers: Sort<number>[] = [new BubbleSort(), new MergeSort()];
