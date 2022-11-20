@@ -1,6 +1,13 @@
 import { swap } from "../../utils/swap";
 import { Sort } from "./BaseSort";
 
+// Time Complexity
+// ---------------
+// Best: O(n)
+// Average & Worst: O(n^2)
+
+// Stable: True
+// ------------
 export class BubbleSort<T> extends Sort<T> {
   constructor() {
     super("Bubble Sort");
