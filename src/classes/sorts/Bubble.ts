@@ -1,4 +1,3 @@
-import { CompareFn } from "../../interfaces/CompareFn";
 import { swap } from "../../utils/swap";
 import { Sort } from "./BaseSort";
 
