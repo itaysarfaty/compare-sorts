@@ -16,11 +16,6 @@ Content here...
 # API Endpoints
 
 ## `/compare GET`
-
-### Query Options
-1.  `size` Number _Default 1000_
-2. `trials` Number _Default 100_
- 
    
 ### Example Return
 ```json
@@ -45,6 +40,11 @@ Content here...
 `trials` Number of times to run each sort (Returns average execution time)  
   
 `results` Average executions in miliseconds for all algorithms  
+  
+
+### Query Options
+1. `size` **Number** _Default 1000_
+2. `trials` **Number** _Default 100_
  
  ## `/compare/test GET`
  Test all sorting algorithms against JS `Array.Sort()`
@@ -80,7 +80,7 @@ Content here...
    
 # Interfaces
 
-### `Result`  
-### `CompareFn`  
-### `Query`  
+### `IResult`  
+### `ICompareFn`  
+### `IQuery`  
 
