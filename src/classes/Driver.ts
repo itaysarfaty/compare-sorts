@@ -47,8 +47,18 @@ export class Driver<T> {
 
     this.sortingAlgs.forEach((alg) => {
       const unsorted = [...this.collection.array];
-      const sorted = alg.sort(unsorted, this.collection.compare);
-      results.push({ name: alg.name, passed: _.isEqual(trueSort, sorted) });
+      let passed = false;
+
+      try {
+        const sorted = alg.sort(unsorted, this.collection.compare);
+        passed = _.isEqual(trueSort, sorted);
+      } catch (err) {
+        console.log(err);
+      }
+      results.push({
+        name: alg.name,
+        passed: passed,
+      });
     });
     return results;
   }
