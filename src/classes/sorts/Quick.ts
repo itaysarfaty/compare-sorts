@@ -28,42 +28,56 @@ export class QuickSort<T> extends Sort<T> {
     left: number,
     right: number
   ) {
-    if (array.length > 1) {
-      let pivot = this.partition(array, compareFn, left, right);
+    // Base case
+    if (array.length <= 1) {
+      return array;
+    }
 
-      if (left < pivot - 1) {
-        this.quickSort(array, compareFn, left, pivot - 1);
-      }
+    // Call partition to find pivot
+    let pivot = this.partition(array, compareFn, left, right);
 
-      if (pivot < right) {
-        this.quickSort(array, compareFn, pivot, right);
-      }
+    // Recursive call through the left
+    if (left < pivot - 1) {
+      this.quickSort(array, compareFn, left, pivot - 1);
+    }
+
+    // Recursive call through the right
+    if (pivot < right) {
+      this.quickSort(array, compareFn, pivot, right);
     }
   }
 
   private partition(
     array: T[],
     compareFn: ICompareFn<T>,
-    left: number,
-    right: number
+    lPointer: number,
+    rPointer: number
   ) {
-    let pivot = array[Math.floor((right + left) / 2)];
+    // Get the length between both pointers
+    const pLength = rPointer + lPointer;
 
-    while (left <= right) {
-      while (compareFn(array[left], pivot) < 0) {
-        left++;
+    // Set pivot between both pointers
+    const pivot = array[Math.floor(pLength / 2)];
+
+    // While the left and right pointers haven't crossed each other
+    while (lPointer <= rPointer) {
+      // While array[left] < pivot move left pointer to the right
+      while (compareFn(array[lPointer], pivot) < 0) {
+        lPointer++;
       }
 
-      while (compareFn(array[right], pivot) > 0) {
-        right--;
+      // While array[right] > pivot move right pointer to the left
+      while (compareFn(array[rPointer], pivot) > 0) {
+        rPointer--;
       }
 
-      if (left <= right) {
-        swap(array, left, right);
-        left++;
-        right--;
+      if (lPointer <= rPointer) {
+        // Swap values and update pointers
+        swap(array, lPointer, rPointer);
+        lPointer++;
+        rPointer--;
       }
     }
-    return left;
+    return lPointer;
   }
 }
