@@ -80,9 +80,6 @@ _Insertion sort by V8 Engine of Chrome and Merge sort by Mozilla Firefox and Saf
 4. Requires a `generate` **method** that accepts a size
 
 ## `Sort<T>`
-
-:warning: - Must not modify existing array </pre>
-
 1. Requires a `name` **param**
 2. Requires a `sort` **method** with 2 params
    1. array: T[]
