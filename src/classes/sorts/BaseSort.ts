@@ -5,7 +5,7 @@ export abstract class Sort<T> {
   constructor(protected readonly _name: string) {}
 
   // Sort array in place
-  abstract sort(array: T[], compare: ICompareFn<T>): void;
+  abstract sort(array: T[], compare: ICompareFn<T>): T[];
 
   public getResult(
     array: T[],
