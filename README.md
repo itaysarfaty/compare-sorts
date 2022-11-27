@@ -47,8 +47,10 @@ Content here...
 
 ### Query Options
 
-1. `size` **Number** _Default 1000_
-2. `trials` **Number** _Default 100_
+1. `size` **Number**  
+_Default 1000_  
+3. `trials` **Number**  
+_Default 100_
 
 ## `/compare/test GET`
 
