@@ -75,20 +75,37 @@ _Insertion sort by V8 Engine of Chrome and Merge sort by Mozilla Firefox and Saf
 ## `Collection<T>`
 
 1. Use **generics** to specify type
-2. Requires `min` and `max` **params**
-3. Requires a `compare` **method** for the type
-4. Requires a `generate` **method** that accepts a size
+2. Requires `min` and `max` **properties**  
+_Ristrict the size of the collection_  
+3. Requires a `compare` **method** for the type  
+_Let's the sorting algorithms know how to compare each item_  
+4. Requires a `generate` **method**  
+_Let's the client generate a random collection with a specified size_  
 
 ## `Sort<T>`
-1. Requires a `name` **param**
-2. Requires a `sort` **method** with 2 params
-   1. array: T[]
-   2. compareFn<T>
+1. Requires a `name` **property**
+2. Requires a `sort` **method**  
+_A sorting algorithm that returns the final result_
 
 # Interfaces
 
-### `IResult`
+## `IResult`
+`name` **string**  
+  
+`msec` **number**  
+_Milliseconds it took to complete sort_
 
-### `ICompareFn`
+## `ICompareFn`
+`(a: T, b: T): number`  
+_A function to compare two items in a collection_  
+- a > b **if** result > 0
+- a < b **if** result < 0
+- a = b **if** result = 0
 
-### `IQuery`
+## `IQuery`
+`size` **number**   
+_Count of items in a collections_  
+  
+`trials` **number**  
+_How many times to sort the same collection to obtain an average speed_
+
