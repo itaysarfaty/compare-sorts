@@ -1,3 +1,4 @@
+import { initial } from "lodash";
 import { Sort } from "./BaseSort";
 
 // Time Complexity
@@ -10,7 +11,11 @@ export class MergeSort<T> extends Sort<T> {
     super("Merge Sort");
   }
 
-  public sort(array: T[], compare: ICompareFn<T>): T[] {
+  public sort(array: T[], compare: ICompareFn<T>) {
+    return this.mergeSort(array, compare);
+  }
+
+  private mergeSort(array: T[], compare: ICompareFn<T>): T[] {
     // Base case for recursion
     if (array.length <= 1) {
       return array;
@@ -24,8 +29,8 @@ export class MergeSort<T> extends Sort<T> {
     const rightArr = array.slice(middle);
 
     // Recurse down both halves
-    const leftRec = this.sort(leftArr, compare);
-    const rightRec = this.sort(rightArr, compare);
+    const leftRec = this.mergeSort(leftArr, compare);
+    const rightRec = this.mergeSort(rightArr, compare);
 
     // Return merged arrays
     return this.merge(leftRec, rightRec, compare);

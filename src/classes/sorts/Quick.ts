@@ -15,11 +15,8 @@ export class QuickSort<T> extends Sort<T> {
   }
 
   public sort(array: T[], compareFn: ICompareFn<T>) {
-    const _array = [...array];
-
-    this.quickSort(_array, compareFn, 0, array.length - 1);
-
-    return _array;
+    this.quickSort(array, compareFn, 0, array.length - 1);
+    return array;
   }
 
   private quickSort(
