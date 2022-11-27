@@ -2,13 +2,21 @@
 
 # About
 
-Content here...
+A typescript project to compare the preformance of different sorting algorithims.
 
 # Supported algorithms
 
-- Bubble Sort
-- Merge Sort
-- Quick Sort
+- [x] Bubble Sort
+- [x] Merge Sort
+- [x] Quick Sort
+
+# Road map
+
+- [ ] Selection Sort
+- [ ] Insertion Sort
+- [ ] Radix Sort
+- [ ] Implement Jest testing
+
 
 # Server
 
@@ -47,9 +55,9 @@ Content here...
 
 ### Query Options
 
-1. `size` **Number**  
+- `size` **Number**  
 _Default 1000_  
-3. `trials` **Number**  
+- `trials` **Number**  
 _Default 100_
 
 ## `/compare/test GET`
@@ -76,17 +84,17 @@ _Insertion sort by V8 Engine of Chrome and Merge sort by Mozilla Firefox and Saf
 
 ## `Collection<T>`
 
-1. Use **generics** to specify type
-2. Requires `min` and `max` **properties**  
+- Use **generics** to specify type
+- Requires `min` and `max` **properties**  
 _Ristrict the size of the collection_  
-3. Requires a `compare` **method** for the type  
+- Requires a `compare` **method** for the type  
 _Let's the sorting algorithms know how to compare each item_  
-4. Requires a `generate` **method**  
+- Requires a `generate` **method**  
 _Let's the client generate a random collection with a specified size_  
 
 ## `Sort<T>`
-1. Requires a `name` **property**
-2. Requires a `sort` **method**  
+- Requires a `name` **property**
+- Requires a `sort` **method**  
 _A sorting algorithm that returns the final result_
 
 # Interfaces
