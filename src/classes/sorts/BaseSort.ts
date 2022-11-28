@@ -2,6 +2,10 @@ export abstract class Sort<T> {
   get name() {
     return this._name;
   }
+
+  private minTrials = 1;
+  private maxTrials = 100_000;
+
   constructor(protected readonly _name: string) {}
 
   // Sort array in place
@@ -35,10 +39,10 @@ export abstract class Sort<T> {
   }
 
   private checkTrialSize(size: number) {
-    const min = 1;
-    const max = 100_000;
-    if (size < min || size > max) {
-      throw new Error(`Number of trials must be between ${min} and ${max}`);
+    if (size < this.minTrials || size > this.maxTrials) {
+      throw new Error(
+        `Number of trials must be between ${this.minTrials} and ${this.maxTrials}`
+      );
     }
   }
 }
