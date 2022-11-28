@@ -15,6 +15,7 @@ A typescript project to compare the preformance of different sorting algorithims
 - [ ] Selection Sort
 - [ ] Insertion Sort
 - [ ] Radix Sort
+- [ ] Tim Sort
 - [ ] Implement Jest testing
 
 
@@ -55,9 +56,9 @@ A typescript project to compare the preformance of different sorting algorithims
 
 ### Query Options
 
-- `size` **Number**  
+- `size` **number**  
 _Default 1000_  
-- `trials` **Number**  
+- `trials` **number**  
 _Default 100_
 
 ## `/compare/test GET`
