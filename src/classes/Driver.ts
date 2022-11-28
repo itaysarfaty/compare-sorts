@@ -40,26 +40,40 @@ export class Driver<T> {
     this.collection.new(size);
   }
 
+  // This method is used to test all the algorithms passed to the driver
   public test() {
+    // Create test array of length 5
     this.generateCollection(5);
-    const results: { name: string; passed: boolean }[] = [];
-    const trueSort = [...this.collection.array].sort();
 
-    this.sortingAlgs.forEach((alg) => {
-      const unsorted = [...this.collection.array];
+    // Initialize return array
+    const results: { name: string; passed: boolean }[] = [];
+
+    // Copy and sort the test array
+    const validSort = [...this.collection.array].sort();
+
+    this.sortingAlgs.forEach((sortingAlg) => {
+      // Copy the collection
+      const unsortedArray = [...this.collection.array];
+
+      // Default "passed" state to false
       let passed = false;
 
       try {
-        const sorted = alg.sort(unsorted, this.collection.compare);
-        passed = _.isEqual(trueSort, sorted);
+        // Return result from sorting algorithm
+        const sorted = sortingAlg.sort(unsortedArray, this.collection.compare);
+        // Run a deep comparison against validSort
+        passed = _.isEqual(validSort, sorted);
       } catch (err) {
         console.log(err);
       }
+
+      // Update results
       results.push({
-        name: alg.name,
+        name: sortingAlg.name,
         passed: passed,
       });
     });
+
     return results;
   }
 }
