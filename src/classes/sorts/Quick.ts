@@ -5,8 +5,9 @@ import { Sort } from "./BaseSort";
 // ---------------
 // Best & Average: O(n log(n))
 // Worst: (n^2)
-
+// ------------
 // Stable: False
+// In Place: True
 // ------------
 
 export class QuickSort<T> extends Sort<T> {
