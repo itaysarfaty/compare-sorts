@@ -16,8 +16,8 @@ export abstract class Sort<T> {
     compare: ICompareFn<T>,
     trials: number
   ): IResult {
-    this.checkTrialSize(trials);
-    let averageExecutionTime = 0;
+    this.validateTrials(trials);
+    let totalTime = 0;
 
     for (let i = 1; i <= trials; i++) {
       // Calculate execution time
@@ -26,19 +26,19 @@ export abstract class Sort<T> {
       const end = performance.now();
 
       // Aggregate total milliseconds
-      averageExecutionTime += end - start;
+      totalTime += end - start;
     }
 
     // Calculate average
-    averageExecutionTime = averageExecutionTime / trials;
+    const averageTime = totalTime / trials;
 
     //Round up to 5 decimal places
-    const time = parseFloat(averageExecutionTime.toFixed(5));
+    const formattedTime = parseFloat(averageTime.toFixed(5));
 
-    return { name: this._name, msec: time };
+    return { name: this._name, msec: formattedTime };
   }
 
-  private checkTrialSize(size: number) {
+  private validateTrials(size: number) {
     if (size < this.minTrials || size > this.maxTrials) {
       throw new Error(
         `Number of trials must be between ${this.minTrials} and ${this.maxTrials}`
