@@ -2,7 +2,7 @@
 
 # About
 
-A typescript project to compare the preformance of different sorting algorithims.
+A typescript project to compare the performance of different sorting algorithms.
 
 # Supported algorithms
 
@@ -10,10 +10,10 @@ A typescript project to compare the preformance of different sorting algorithims
 - [x] Merge Sort
 - [x] Quick Sort
 - [x] Selection Sort
+- [x] Insertion Sort
 
 # Road map
 
-- [ ] Insertion Sort
 - [ ] Radix Sort
 - [ ] Tim Sort
 - [ ] Implement Jest testing
