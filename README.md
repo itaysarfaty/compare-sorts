@@ -14,7 +14,6 @@ A typescript project to compare the performance of different sorting algorithms.
 
 # Road map
 
-- [ ] Radix Sort
 - [ ] Tim Sort
 - [ ] Implement Jest testing
 
