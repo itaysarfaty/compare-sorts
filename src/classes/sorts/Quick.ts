@@ -52,20 +52,22 @@ export class QuickSort<T> extends Sort<T> {
     rPointer: number
   ) {
     // Get the length between both pointers
-    const pLength = rPointer + lPointer;
+    const spaceBetweenPointers = lPointer + rPointer;
 
     // Set pivot between both pointers
-    const pivot = array[Math.floor(pLength / 2)];
+    const pivotValue = array[Math.floor(spaceBetweenPointers / 2)];
 
     // While the left and right pointers haven't crossed each other
     while (lPointer <= rPointer) {
-      // While array[left] < pivot move left pointer to the right
-      while (compareFn(array[lPointer], pivot) < 0) {
+      // Evaluate left side
+      // Move the pointer right until you find a value that should come after the pivot
+      while (compareFn(array[lPointer], pivotValue) < 0) {
         lPointer++;
       }
 
-      // While array[right] > pivot move right pointer to the left
-      while (compareFn(array[rPointer], pivot) > 0) {
+      // Evaluate right side
+      // Move the pointer left until you find a value that should come before the pivot
+      while (compareFn(array[rPointer], pivotValue) > 0) {
         rPointer--;
       }
 
