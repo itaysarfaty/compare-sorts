@@ -1,3 +1,4 @@
+import { ICompareFn } from "../../interfaces/ICompareFn";
 import { swap } from "../../utils/swap";
 import { Sort } from "./BaseSort";
 

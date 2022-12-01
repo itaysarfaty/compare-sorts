@@ -1,5 +1,5 @@
 // Interface for query
-interface IQuery {
+export interface IQuery {
   size: number;
   trials: number;
 }

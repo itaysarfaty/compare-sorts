@@ -1,4 +1,5 @@
 import { initial } from "lodash";
+import { ICompareFn } from "../../interfaces/ICompareFn";
 import { Sort } from "./BaseSort";
 
 // Time Complexity

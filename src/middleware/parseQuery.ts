@@ -1,4 +1,5 @@
 import { RequestHandler } from "express";
+import { IQuery } from "../interfaces/IQuery";
 
 // Pass a validated query into res.locales.query
 export const parseQuery: RequestHandler = (req, res, next) => {

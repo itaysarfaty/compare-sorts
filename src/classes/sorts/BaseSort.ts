@@ -1,3 +1,6 @@
+import { ICompareFn } from "../../interfaces/ICompareFn";
+import { IResult } from "../../interfaces/IResult";
+
 export abstract class Sort<T> {
   get name() {
     return this._name;

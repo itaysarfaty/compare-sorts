@@ -1,4 +1,4 @@
-interface IResult {
+export interface IResult {
   readonly name: string;
   readonly msec: number;
 }

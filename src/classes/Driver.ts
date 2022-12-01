@@ -2,6 +2,7 @@ import { compareResult } from "../utils/compareResult";
 import { Sort } from "./sorts/BaseSort";
 import { Collection } from "./collections/BaseCollection";
 import _ from "lodash";
+import { IResult } from "../interfaces/IResult";
 
 export class Driver<T> {
   constructor(

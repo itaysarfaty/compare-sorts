@@ -1,8 +1,8 @@
 import { RequestHandler } from "express";
-
 import { Numbers } from "./classes/collections/Numbers";
 import { Driver } from "./classes/Driver";
 import { SortNumbers as Sort } from "./classes/sorts/_export";
+import { IQuery } from "./interfaces/IQuery";
 
 const driver = new Driver(Sort, new Numbers(5, 100_000));
 
