@@ -4,13 +4,13 @@
 
 A typescript project to compare the performance of different sorting algorithms.
 
-# Supported algorithms
+# Supported
 
 - [x] Bubble Sort
-- [x] Merge Sort
-- [x] Quick Sort
 - [x] Selection Sort
 - [x] Insertion Sort
+- [x] Merge Sort
+- [x] Quick Sort
 
 # Road map
 
@@ -61,8 +61,7 @@ A typescript project to compare the performance of different sorting algorithms.
 
 ## `/compare/test GET`
 
-Test all sorting algorithms against JS `Array.sort()`  
-_Insertion sort by V8 Engine of Chrome and Merge sort by Mozilla Firefox and Safari_
+Test all sorting algorithms against `Array.sort()`
 
 ### Example Return
 
