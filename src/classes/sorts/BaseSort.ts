@@ -1,15 +1,22 @@
 import { ICompareFn } from "../../interfaces/ICompareFn";
 import { IResult } from "../../interfaces/IResult";
 
+type trialBounds = { min: number; max: number };
 export abstract class Sort<T> {
   get name() {
     return this._name;
   }
 
-  private minTrials = 1;
-  private maxTrials = 100_000;
+  protected readonly _name: string;
+  private readonly trialBounds: trialBounds;
 
-  constructor(protected readonly _name: string) {}
+  constructor(
+    name: string,
+    trialBounds: trialBounds = { min: 1, max: 100_000 }
+  ) {
+    this._name = name;
+    this.trialBounds = trialBounds;
+  }
 
   // Sort array in place
   abstract sort(array: T[], compare: ICompareFn<T>): T[];
@@ -42,9 +49,9 @@ export abstract class Sort<T> {
   }
 
   private validateTrials(size: number) {
-    if (size < this.minTrials || size > this.maxTrials) {
+    if (size < this.trialBounds.min || size > this.trialBounds.max) {
       throw new Error(
-        `Number of trials must be between ${this.minTrials} and ${this.maxTrials}`
+        `Number of trials must be between ${this.trialBounds.min} and ${this.trialBounds.max}`
       );
     }
   }
