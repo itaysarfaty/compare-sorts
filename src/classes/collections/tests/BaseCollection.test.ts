@@ -21,6 +21,10 @@ test("Generate new collection", () => {
   expect(dummyCollection.array).toEqual([0, 1, 2, 3, 4]);
 });
 
+test("Get collection size", () => {
+  expect(dummyCollection.size).toEqual(5);
+});
+
 test("Collection too small", () => {
   try {
     dummyCollection.new(0);

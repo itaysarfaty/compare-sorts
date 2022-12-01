@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1669908273647" clover="3.2.0">
-  <project timestamp="1669908273647" name="All files">
-    <metrics statements="109" coveredstatements="106" conditionals="20" coveredconditionals="19" methods="22" coveredmethods="21" elements="151" coveredelements="146" complexity="0" loc="109" ncloc="109" packages="3" files="9" classes="9"/>
+<coverage generated="1669908489086" clover="3.2.0">
+  <project timestamp="1669908489086" name="All files">
+    <metrics statements="109" coveredstatements="107" conditionals="20" coveredconditionals="19" methods="22" coveredmethods="22" elements="151" coveredelements="148" complexity="0" loc="109" ncloc="109" packages="3" files="9" classes="9"/>
     <package name="classes.collections">
-      <metrics statements="9" coveredstatements="8" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="3"/>
+      <metrics statements="9" coveredstatements="9" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="4"/>
       <file name="BaseCollection.ts" path="/Users/itaysarfaty/Documents/Personal/Development/compare-sorts/src/classes/collections/BaseCollection.ts">
-        <metrics statements="9" coveredstatements="8" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="3"/>
+        <metrics statements="9" coveredstatements="9" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="4"/>
         <line num="1" count="2" type="stmt"/>
         <line num="7" count="5" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
         <line num="15" count="2" type="stmt"/>
         <line num="16" count="2" type="stmt"/>
         <line num="17" count="2" type="stmt"/>
