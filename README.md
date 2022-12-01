@@ -19,7 +19,7 @@ A typescript project to compare the performance of different sorting algorithms.
 
 # Server
 
-**Run** `npm run start:dev`
+**Run** `npm run start`
 
 **Navigate to** `localhost:3000`
 
