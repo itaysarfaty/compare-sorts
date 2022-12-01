@@ -1,18 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1669858496425" clover="3.2.0">
-  <project timestamp="1669858496425" name="All files">
-    <metrics statements="9" coveredstatements="8" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="3" elements="16" coveredelements="14" complexity="0" loc="9" ncloc="9" packages="1" files="1" classes="1"/>
-    <file name="BaseCollection.ts" path="/Users/itaysarfaty/Documents/Personal/Development/compare-sorts/src/classes/collections/BaseCollection.ts">
+<coverage generated="1669908273647" clover="3.2.0">
+  <project timestamp="1669908273647" name="All files">
+    <metrics statements="109" coveredstatements="106" conditionals="20" coveredconditionals="19" methods="22" coveredmethods="21" elements="151" coveredelements="146" complexity="0" loc="109" ncloc="109" packages="3" files="9" classes="9"/>
+    <package name="classes.collections">
       <metrics statements="9" coveredstatements="8" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="3"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
-      <line num="11" count="0" type="stmt"/>
-      <line num="15" count="1" type="stmt"/>
-      <line num="16" count="1" type="stmt"/>
-      <line num="17" count="1" type="stmt"/>
-      <line num="24" count="3" type="cond" truecount="3" falsecount="0"/>
-      <line num="25" count="1" type="stmt"/>
-      <line num="27" count="2" type="stmt"/>
-    </file>
+      <file name="BaseCollection.ts" path="/Users/itaysarfaty/Documents/Personal/Development/compare-sorts/src/classes/collections/BaseCollection.ts">
+        <metrics statements="9" coveredstatements="8" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="3"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="24" count="6" type="cond" truecount="3" falsecount="0"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="classes.sorts">
+      <metrics statements="96" coveredstatements="94" conditionals="17" coveredconditionals="16" methods="17" coveredmethods="17"/>
+      <file name="BaseSort.ts" path="/Users/itaysarfaty/Documents/Personal/Development/compare-sorts/src/classes/sorts/BaseSort.ts">
+        <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="7" count="25" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="36" count="3" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="52" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="53" count="2" type="stmt"/>
+      </file>
+      <file name="Bubble.ts" path="/Users/itaysarfaty/Documents/Personal/Development/compare-sorts/src/classes/sorts/Bubble.ts">
+        <metrics statements="10" coveredstatements="10" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="25" count="21" type="stmt"/>
+        <line num="27" count="67" type="cond" truecount="1" falsecount="0"/>
+        <line num="28" count="33" type="stmt"/>
+        <line num="32" count="5" type="stmt"/>
+      </file>
+      <file name="Insertion.ts" path="/Users/itaysarfaty/Documents/Personal/Development/compare-sorts/src/classes/sorts/Insertion.ts">
+        <metrics statements="10" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="24" count="25" type="stmt"/>
+        <line num="27" count="25" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="31" count="5" type="stmt"/>
+      </file>
+      <file name="Merge.ts" path="/Users/itaysarfaty/Documents/Personal/Development/compare-sorts/src/classes/sorts/Merge.ts">
+        <metrics statements="17" coveredstatements="17" conditionals="5" coveredconditionals="5" methods="3" coveredmethods="3"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="19" count="47" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="26" type="stmt"/>
+        <line num="24" count="21" type="stmt"/>
+        <line num="27" count="21" type="stmt"/>
+        <line num="28" count="21" type="stmt"/>
+        <line num="31" count="21" type="stmt"/>
+        <line num="32" count="21" type="stmt"/>
+        <line num="35" count="21" type="stmt"/>
+        <line num="40" count="21" type="stmt"/>
+        <line num="43" count="21" type="cond" truecount="2" falsecount="0"/>
+        <line num="45" count="31" type="cond" truecount="2" falsecount="0"/>
+        <line num="46" count="29" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="52" count="21" type="stmt"/>
+      </file>
+      <file name="Quick.ts" path="/Users/itaysarfaty/Documents/Personal/Development/compare-sorts/src/classes/sorts/Quick.ts">
+        <metrics statements="25" coveredstatements="25" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="31" count="22" type="cond" truecount="1" falsecount="0"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="36" count="21" type="stmt"/>
+        <line num="39" count="21" type="cond" truecount="1" falsecount="0"/>
+        <line num="40" count="10" type="stmt"/>
+        <line num="44" count="21" type="cond" truecount="1" falsecount="0"/>
+        <line num="45" count="7" type="stmt"/>
+        <line num="56" count="21" type="stmt"/>
+        <line num="59" count="21" type="stmt"/>
+        <line num="62" count="21" type="stmt"/>
+        <line num="65" count="21" type="stmt"/>
+        <line num="66" count="15" type="stmt"/>
+        <line num="71" count="21" type="stmt"/>
+        <line num="72" count="30" type="stmt"/>
+        <line num="75" count="21" type="cond" truecount="1" falsecount="0"/>
+        <line num="77" count="21" type="stmt"/>
+        <line num="78" count="21" type="stmt"/>
+        <line num="79" count="21" type="stmt"/>
+        <line num="82" count="21" type="stmt"/>
+      </file>
+      <file name="Selection.ts" path="/Users/itaysarfaty/Documents/Personal/Development/compare-sorts/src/classes/sorts/Selection.ts">
+        <metrics statements="12" coveredstatements="11" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="24" count="25" type="stmt"/>
+        <line num="27" count="25" type="stmt"/>
+        <line num="29" count="92" type="cond" truecount="0" falsecount="1"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="34" count="25" type="stmt"/>
+        <line num="36" count="5" type="stmt"/>
+      </file>
+      <file name="_export.ts" path="/Users/itaysarfaty/Documents/Personal/Development/compare-sorts/src/classes/sorts/_export.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="swap.ts" path="/Users/itaysarfaty/Documents/Personal/Development/compare-sorts/src/utils/swap.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="80" type="stmt"/>
+        <line num="3" count="80" type="stmt"/>
+        <line num="4" count="80" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>

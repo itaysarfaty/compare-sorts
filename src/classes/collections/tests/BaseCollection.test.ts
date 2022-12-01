@@ -1,4 +1,4 @@
-import { Collection } from "./BaseCollection";
+import { Collection } from "../BaseCollection";
 
 class DummyCollection extends Collection<number> {
   constructor(min: number, max: number) {
@@ -14,7 +14,7 @@ class DummyCollection extends Collection<number> {
 
 const minSize = 1;
 const maxSize = 10;
-const dummyCollection = new DummyCollection(minSize, maxSize);
+export const dummyCollection = new DummyCollection(minSize, maxSize);
 
 test("Generate new collection", () => {
   dummyCollection.new(5);
