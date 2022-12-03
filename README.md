@@ -1,5 +1,3 @@
-<pre>Project in progress...</pre>
-
 # About
 
 A typescript project to compare the performance of different sorting algorithms.
