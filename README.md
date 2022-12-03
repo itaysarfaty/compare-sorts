@@ -13,11 +13,14 @@ A typescript project to compare the performance of different sorting algorithms.
 # Road map
 
 - [ ] Tim Sort
-- [ ] Implement Jest testing
 
 # Server
 
-**Run** `npm run start`
+**Start server** `npm run start`
+
+**Test program with jest** `npm run test`
+
+**Development server** `npm run dev`
 
 **Navigate to** `localhost:3000`
 
